@@ -1,0 +1,182 @@
+.section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+}
+
+.sectionLeft{
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.sectionRight{
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    padding: 0 3px;
+}
+
+.homeImg{
+    width: clamp(450px,100%,850px);
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(.25);
+    animation: 1.2s grow forwards;
+}
+
+.cake1{
+    position: absolute;    
+    left: 7%;
+    top: 17%;
+    width: clamp(30px, 20%, 110px);
+    animation: 1.2s shake  .2s infinite alternate ease-in-out;;
+}
+
+.cake2{
+    position: absolute;    
+    left: 10%;
+    bottom: 20%;
+    width: clamp(30px, 20%, 110px);
+    animation: 1.2s shake .4s infinite alternate ease-in-out;;
+
+}
+
+.cake3{
+    position: absolute;   
+    top: 5%;
+    right: 5%; 
+    width: clamp(30px, 20%, 110px);
+    animation: 1.2s shake .2s infinite alternate ease-in-out;;
+}
+
+.cake4{
+    position: absolute;    
+    right: 10%;
+    bottom: 15%;
+    width: clamp(30px, 20%, 110px);
+    animation: 1.2s shake .6s infinite alternate ease-in-out;;
+}
+
+
+
+@keyframes shake{
+    from{
+        transform: translateY(0%);
+    }
+    to{
+        transform: translateY(30%);
+    }
+
+}
+
+.title{
+    width: clamp(150px,80%, 650px);
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+.text1{
+    font-size: clamp(25px,3vw, 50px);
+}
+
+.text2{
+    text-align: center;
+    font-size: clamp(18px, 2vw, 20px);
+}
+
+
+@keyframes heartbeat {
+    from {
+      transform: scale(1);
+      transform-origin: center center;
+      animation-timing-function: ease-out;
+    }
+    10% {
+      transform: scale(0.91);
+      animation-timing-function: ease-in;
+    }
+    17% {
+      transform: scale(0.98);
+      animation-timing-function: ease-out;
+    }
+    33% {
+      transform: scale(0.87);
+      animation-timing-function: ease-in;
+    }
+    45% {
+      transform: scale(1);
+      animation-timing-function: ease-out;
+    }
+  }
+
+  .klor{
+    position: absolute;
+  }
+
+  .klor1{
+    right: 10%;
+    top: 0%;
+  }
+
+  .klor2{
+    right: 0;
+    bottom: 0;
+  }
+
+  @media screen and (max-width: 750px){
+    .section{
+        flex-direction: column;
+    }
+
+    .sectionLeft,.sectionRight{
+        width: 100%;
+    }
+
+    .sectionLeft{
+        order: 2;
+        height: 50vh;
+        transform: translateY(-10%);
+    }
+
+    .sectionRight{
+        height: 40vh;
+        order: 1;
+    }
+
+    .klor1{
+        width: 50%;
+        right: 0;
+    }
+
+    .klor2{
+        right: initial;
+        width: 50%;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+@keyframes grow{
+    from{
+        opacity: 0;
+        transform: scale(.25);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1.0);
+    }
+}
