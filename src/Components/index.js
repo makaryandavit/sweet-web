@@ -5,3 +5,5 @@ export { Catalogue } from "./Catalogue";
 export { Cool } from "./Cool";
 export { Holidays } from "./Holidays";
 export { Boxes } from "./Boxes";
+export { News } from "./News";
+export { About }  from "./About";

@@ -15,6 +15,10 @@
     font-weight: bold;
 }
 
+.inside:hover .box:not(:hover){
+    transform: scale(0.9);
+}
+
 .inside{
     width: 80%;
     height: auto;

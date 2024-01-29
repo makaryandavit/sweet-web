@@ -57,12 +57,12 @@ const Header = () => {
                 }}>Holidays</a>
               </li>
               <li>
-                <a href="" onClick={(e) => {
+                <a href="#boxes" onClick={(e) => {
                   setBurgerBool(false);
                 }}>Boxes</a>
               </li>
               <li>
-                <a href="" onClick={(e) => {
+                <a href="#news" onClick={(e) => {
                   setBurgerBool(false);
                 }}>News</a>
               </li>
@@ -99,10 +99,10 @@ const Header = () => {
             <a href="#holidays">Holidays</a>
           </li>
           <li>
-            <a href="">Boxes</a>
+            <a href="#boxes">Boxes</a>
           </li>
           <li>
-            <a href="">News</a>
+            <a href="#news">News</a>
           </li>
         </ul>
       </div>
