@@ -14,7 +14,7 @@ const Cool = () => {
   },[])
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="cool">
       <p className={styles.title}>Акции</p>
       <div className={styles.inside}>
       <div className={`${styles.box}`} data-aos="zoom-out" data-aos-duration="7000" >

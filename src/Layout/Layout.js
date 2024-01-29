@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "./layout.module.css";
-import { Catalogue, Cool, Home } from '../Components'
+import { Boxes, Catalogue, Cool, Holidays, Home } from '../Components'
 import { BiSolidArrowToTop } from "react-icons/bi";
 
 
@@ -17,6 +17,8 @@ const Layout = () => {
       <Home />
       <Catalogue />
       <Cool />
+      <Holidays />
+      <Boxes />
     </div>
   )
 }

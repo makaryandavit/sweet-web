@@ -28,7 +28,7 @@ const Header = () => {
           <li>Instagram</li>
           <li>Facebook</li>
         </ul>
-        <div className={styles.burgerMenu}>
+        <div className={styles.burgerMenu ? `${styles.headerFixedCla} ${styles.burgerMenu}` : `${styles.noHeaderFixed} ${styles.burgerMenu}`}>
           <img src={BurgerOpen} className={styles.burgerButton} alt="" onClick={() => {
             setBurgerBool(true)
           }} />
@@ -47,12 +47,12 @@ const Header = () => {
                 }}>Catalogue</a>
               </li>
               <li>
-                <a href="" onClick={(e) => {
+                <a href="#cool" onClick={(e) => {
                   setBurgerBool(false);
                 }}>Cool</a>
               </li>
               <li>
-                <a href="" onClick={(e) => {
+                <a href="#holidays" onClick={(e) => {
                   setBurgerBool(false);
                 }}>Holidays</a>
               </li>
@@ -88,7 +88,7 @@ const Header = () => {
             <a href="#catalogue">Catalogue</a>
           </li>
           <li>
-            <a href="">Cool</a>
+            <a href="#cool">Cool</a>
           </li>
           <li>
             <img src={Logo} className={styles.logo} alt="" onClick={() => {
@@ -96,7 +96,7 @@ const Header = () => {
             }} />
           </li>
           <li>
-            <a href="">Holidays</a>
+            <a href="#holidays">Holidays</a>
           </li>
           <li>
             <a href="">Boxes</a>

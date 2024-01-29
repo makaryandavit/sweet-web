@@ -1,0 +1,76 @@
+.section{
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+}
+
+.section:hover .box:not(:hover){
+    transform: scale(0.9);
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: .5s;
+    box-shadow: rgba(199, 199, 199, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.box:hover:not(:hover){
+    transform: scale(0.9);
+}
+
+.box:hover{
+    transform: scale(1.1);
+}
+
+.top{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.text{
+    text-align: center;
+    font-weight: bold;
+}
+
+.line{
+    width: 80%;
+    position: absolute;
+    top: 32%;
+}
+
+.nkarCake{
+    animation: 1.2s shake infinite alternate ease-in-out;
+}
+
+@keyframes shake{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(10%);
+    }
+}
